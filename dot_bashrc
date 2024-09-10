@@ -148,9 +148,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 alias venv="python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
 
-# $HOME/terminal_sunday.sh 1990-08-07 Nils
+"$HOME"/terminal_sunday.sh 1990-08-07 Nils
 
-# export PULUMI_CONFIG_PASSPHRASE=5CsFGKwAIT4YbQX5hRcSLm
 [ -f /home/nils/.tbmk/.bash ] && source /home/nils/.tbmk/.bash
 
 alias dmidi="~/Programs/dmidiplayer-1.7.2-x86_64.AppImage"
