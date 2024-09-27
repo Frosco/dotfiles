@@ -161,10 +161,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export PATH=~/dev/prof/aws-cli-tools/samlauth:$PATH
 alias samlauth=samlauth.py 
-eval "$(~/.local/bin/mise activate bash)"
 
 function mkcd() {
   mkdir -p "$1" && cd "$1" || exit
 }
 
-alias cursor=~/Programs/cursor-0.40.4-build-2409052yfcjagw2-x86_64.AppImage
+alias cursor=~/Programs/cursor-0.41.2-build-240921llnho65ov-x86_64.AppImage
+
+eval "$(~/.local/bin/mise activate bash)"
