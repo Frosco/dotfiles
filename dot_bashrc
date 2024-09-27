@@ -168,4 +168,7 @@ function mkcd() {
 
 alias cursor=~/Programs/cursor-0.41.2-build-240921llnho65ov-x86_64.AppImage
 
+#Make an alias "cursor_newest" that points to the most recent .AppImage file in the "~/Programs" directory
+alias cursor_newest="ls -t ~/Programs/cursor-*.AppImage | head -n 1 | xargs -I {} ln -sf {} ~/Programs/cursor_newest.AppImage"
+
 eval "$(~/.local/bin/mise activate bash)"
