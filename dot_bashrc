@@ -146,7 +146,7 @@ export VAULT_ADDR=https://vault.sikt.no:8200/
 export PATH=$PATH:/usr/local/go/bin
 [ -f ~/.inshellisense/key-bindings.bash ] && source ~/.inshellisense/key-bindings.bash
 
-alias venv="python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
+alias venv="uv venv && source .venv/bin/activate && uv pip install -r requirements.txt"
 
 "$HOME"/terminal_sunday.sh 1990-08-07 Nils
 
@@ -168,5 +168,5 @@ function mkcd() {
 
 alias cursor=~/Programs/cursor-0.41.2-build-240921llnho65ov-x86_64.AppImage
 
-curl https://mise.run | sh
+curl https://mise.run | sh > dev/null 2>&1
 eval "$(~/.local/bin/mise activate bash)"
