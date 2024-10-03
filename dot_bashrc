@@ -168,5 +168,4 @@ function mkcd() {
 
 alias cursor=~/Programs/cursor-0.41.2-build-240921llnho65ov-x86_64.AppImage
 
-curl https://mise.run | sh > dev/null 2>&1
 eval "$(~/.local/bin/mise activate bash)"
