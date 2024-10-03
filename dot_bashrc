@@ -159,8 +159,11 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export PATH=~/dev/prof/aws-cli-tools/samlauth:$PATH
-alias samlauth=samlauth.py 
+function samlauth() {
+    source /home/nils/dev/prof/aws-cli-tools/samlauth/.venv/bin/activate
+    ~/dev/prof/aws-cli-tools/samlauth/samlauth.py "$@"
+    deactivate
+}
 
 function mkcd() {
   mkdir -p "$1" && cd "$1" || exit
