@@ -139,7 +139,7 @@ export WALK_EDITOR=code
 
 alias sandbox_login="cd ~/dev/prof/aws-cli-tools/samlauth && ./samlauth.py -r FeideAdmin -a PlatonSandbox --region eu-north-1"
 alias python=python3
-alias update="sudo apt update && sudo apt upgrade -y && brew upgrade"
+alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && curl https://mise.run | sh"
 
 export PATH=/usr/local/lib/nodejs/node-v18.18.0-linux-x64/bin:$PATH
 export VAULT_ADDR=https://vault.sikt.no:8200/
