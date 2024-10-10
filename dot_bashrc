@@ -169,7 +169,20 @@ function mkcd() {
   mkdir -p "$1" && cd "$1" || exit
 }
 
-alias cursor=~/Programs/cursor-0.41.2-build-240921llnho65ov-x86_64.AppImage
+#get the most recent cursor file
+get_latest_cursor() {
+    latest=$(ls -t /home/nils/Programs/cursor-* 2>/dev/null | head -n 1)
+    
+    # Check if a file was found
+    if [ -z "$latest" ]; then
+        echo "No cursor file found"
+        return 1
+    fi
+    
+    echo "$latest"
+}
+alias cursor='$(get_latest_cursor)'
+
 
 export MISE_TRUSTED_CONFIG_PATHS=(/home/nils/dev/prof/aws-cli-tools/samlauth)
 eval "$(~/.local/bin/mise activate bash)"
