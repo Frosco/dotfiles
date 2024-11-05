@@ -183,6 +183,5 @@ get_latest_cursor() {
 }
 alias cursor='$(get_latest_cursor)'
 
-
 export MISE_TRUSTED_CONFIG_PATHS=(/home/nils/dev/prof/aws-cli-tools/samlauth)
 eval "$(~/.local/bin/mise activate bash)"
